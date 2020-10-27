@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Calculator: UIViewController {
 
     @IBOutlet weak var screen: UILabel!
     
@@ -17,6 +17,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func number(_ sender: UIButton) {
+        print(sender.titleLabel?.text)
+    }
+    
+    @IBAction func AddPositifNegatif(_ sender: Any) {
+        
+    }
+    
+    @IBAction func operatorCompute(_ sender: UIButton) {
+        print(sender.titleLabel?.text)
+    }
+    
+    
+    
 }
+
 
