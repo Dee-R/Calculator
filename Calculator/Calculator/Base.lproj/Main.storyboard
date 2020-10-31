@@ -27,7 +27,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E4a-fW-DfH">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCO-aX-feb" userLabel="C">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCO-aX-feb" userLabel="C" customClass="ButtonCalculator" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -36,6 +36,9 @@
                                                 <state key="normal" title="C">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="c:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGT-q3-dqS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-Dr-wb8">
                                                 <rect key="frame" x="96" y="0.0" width="86" height="86"/>
@@ -43,6 +46,9 @@
                                                 <state key="normal" title="DEL">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="del:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXO-6B-5e2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyx-ba-3xF">
                                                 <rect key="frame" x="192" y="0.0" width="86" height="86"/>
@@ -75,7 +81,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PaU-ol-70t">
                                         <rect key="frame" x="0.0" y="94" width="374" height="86"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJm-Nh-5cy" userLabel="C">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJm-Nh-5cy" userLabel="C" customClass="ButtonCalculator" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -250,7 +256,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMP-dF-KkC">
                                                 <rect key="frame" x="192" y="0.0" width="86" height="86"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title=",">
+                                                <state key="normal" title=".">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -297,11 +303,30 @@
                     </view>
                     <connections>
                         <outlet property="screen" destination="Vug-hM-gIH" id="2iW-nb-9v4"/>
+                        <outletCollection property="buttons" destination="GOo-w2-THM" collectionClass="NSMutableArray" id="xHa-pp-ASI"/>
+                        <outletCollection property="buttons" destination="PoW-tV-LiJ" collectionClass="NSMutableArray" id="vGd-nS-tQr"/>
+                        <outletCollection property="buttons" destination="ntH-Tq-6rD" collectionClass="NSMutableArray" id="7M8-91-KmE"/>
+                        <outletCollection property="buttons" destination="HcF-ck-Ggq" collectionClass="NSMutableArray" id="Vbw-U1-My7"/>
+                        <outletCollection property="buttons" destination="1X9-Tx-6c3" collectionClass="NSMutableArray" id="1r8-jr-D5y"/>
+                        <outletCollection property="buttons" destination="UaG-6x-JgC" collectionClass="NSMutableArray" id="XFd-K7-Mm3"/>
+                        <outletCollection property="buttons" destination="fzG-Jt-7W0" collectionClass="NSMutableArray" id="b20-SL-QVF"/>
+                        <outletCollection property="buttons" destination="HMP-dF-KkC" collectionClass="NSMutableArray" id="HfJ-dV-eZa"/>
+                        <outletCollection property="buttons" destination="lJm-Nh-5cy" collectionClass="NSMutableArray" id="y81-Ns-pQA"/>
+                        <outletCollection property="buttons" destination="z4j-tr-MCp" collectionClass="NSMutableArray" id="PEu-YJ-Phh"/>
+                        <outletCollection property="buttons" destination="a1V-jl-Dlg" collectionClass="NSMutableArray" id="5hv-F0-9hm"/>
+                        <outletCollection property="buttons" destination="iCO-aX-feb" collectionClass="NSMutableArray" id="i2U-ah-wKS"/>
+                        <outletCollection property="buttons" destination="Ydn-Dr-wb8" collectionClass="NSMutableArray" id="0yA-yS-HaU"/>
+                        <outletCollection property="buttons" destination="wyx-ba-3xF" collectionClass="NSMutableArray" id="DOW-Nd-6m4"/>
+                        <outletCollection property="buttons" destination="wDR-tT-Ot9" collectionClass="NSMutableArray" id="GJX-Ye-Qy7"/>
+                        <outletCollection property="buttons" destination="JRJ-hF-dfO" collectionClass="NSMutableArray" id="wpd-c4-Rrl"/>
+                        <outletCollection property="buttons" destination="3ph-cY-2fR" collectionClass="NSMutableArray" id="qx8-Sd-3Yr"/>
+                        <outletCollection property="buttons" destination="NfJ-lM-PY4" collectionClass="NSMutableArray" id="JCh-NF-BHx"/>
+                        <outletCollection property="buttons" destination="cYv-pc-vNx" collectionClass="NSMutableArray" id="M3g-sL-O82"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-51" y="116"/>
         </scene>
     </scenes>
 </document>
